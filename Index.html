@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Preguntas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="header">
+        <img src="Imagenes/GM.png" alt="Logo 1" class="logo">
+        <h1>Feria de Seguridad en General Motors</h1>
+        <img src="Imagenes/SeguridadLogo.png" alt="Logo 2" class="logo">
+    </nav>
+
+    <div class="flag-container" id="flag-container">
+        <!-- Banderas con valores -->
+        <img src="Imagenes/2.jpg" alt="20" class="flag" onclick="onFlagClick(20)">
+        <img src="Imagenes/2.jpg" alt="50" class="flag" onclick="onFlagClick(50)">
+        <img src="Imagenes/2.jpg" alt="100" class="flag" onclick="onFlagClick(100)">
+        <img src="Imagenes/2.jpg" alt="100" class="flag" onclick="onFlagClick(100)">
+        <!-- Añadir más banderas según sea necesario -->
+    </div>
+
+    <div class="question" id="question" style="display: none;"></div>
+    <div class="options" id="options" style="display: none;"></div>
+    
+    <!-- Modal -->
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="resultMessage"></p>
+            <button onclick="closeModal()">Continuar</button>
+        </div>
+    </div>
+    
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Caras Tristes -->
+    <div id="sad-faces-container"></div>
+
+    <!-- Sound Effects -->
+    <audio id="correctSound" src="sounds/correct.m4a"></audio>
+    <audio id="incorrectSound" src="sounds/incorrect.m4a"></audio>
+</body>
+</html>
